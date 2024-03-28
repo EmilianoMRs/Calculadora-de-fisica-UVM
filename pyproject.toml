@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "calculadora"
+version = "0.1.0"
+description = "es una calculadora de fisica para un proyecto de la universidad UVM"
+authors = ["Andres Moreno <Andres.Emiliano.mr@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pyfiglet = "^1.0.2"
+PyQt6 = "^6.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
