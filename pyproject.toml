@@ -8,7 +8,6 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 pyfiglet = "^1.0.2"
-PyQt6 = "^6.6.1"
 
 
 [build-system]
