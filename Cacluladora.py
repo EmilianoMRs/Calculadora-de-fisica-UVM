@@ -48,12 +48,9 @@ Porfavor de elegir el numero de la calculadora que quieres
                     Δx = x₂ - x₁
                     Δt = t₂ - t₁
                     Δv = Δt / Δt
-3- para calcular velocidad media
-                x2 - x1      Δd
-    Vmed-× = ------------ = ---
-                t2 - t1      Δt
   """)
         PPMRU = int(input("porfavot elige un numero ="))
+
         def MRU_triangulo():
             print(fi("Estas en la calculadora de triangulo "))
             v = float(input("Dime la velocidad: "))
@@ -89,20 +86,39 @@ Porfavor de elegir el numero de la calculadora que quieres
         def MRU_differencia():
             def deltaX():
                 #es el delta x
+                print("estas en delta x")
                 x1 = float(input("Por favor dime la distancia 1(x1)="))
                 x2 = float(input("Por favor dime la distancia 2(x2)="))
-                deltax = x1 - x2
+                deltax = x2 - x1
                 print("""
 Tu distancia 1 fue {0} y distancia 2 fue {1} asi que la diferencia de distancia es {2}m/s
                 """.format(x1,x2,deltax))
-            
+            def deltaT():
+                t1 = float(input("Por favor dime tu tiempo 1(x1)="))
+                t2 = float(input("Por favor dime tu tiempo 2(x2)="))
+                deltat = t2 - t1
+                print("""
+Tu tiempo 1 fue {0} y distancia 2 fue {1} asi que la diferencia de distancia es {2}m/s
+                """.format(t1,t2,deltat))
+            def deltaV():
+                x1 = float(input("Por favor dime la distancia 1(x1)="))
+                x2 = float(input("Por favor dime la distancia 2(x2)="))
+                t1 = float(input("Por favor dime tu tiempo 1(x1)="))
+                t2 = float(input("Por favor dime tu tiempo 2(x2)="))
+                deltat = t2 - t1
+                deltax = x2 - x1
+                deltav = deltax/deltat
+                print(deltav)
+                
 
             print(fi("""
 Calcula los deltas
             """))
-            print("que delta quieres despejar?")
-            
-            eleccin = input("x,t,v? =")
+            print("""
+que delta quieres despejar?
+por favor de poner una letra no la palabra
+""")
+            eleccin = input("x=(distancia),t=(tiempo),v=(Vmed)? =")
             if eleccin == "x":
                 deltaX()
             elif eleccin == "t":
