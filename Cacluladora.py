@@ -1,45 +1,9 @@
 from pyfiglet import Figlet, FigletFont
 
-f = Figlet(font='slant')
 def menu():
-    f = Figlet(font='slant')
-    print("""
-             .#############. 
-          .###################. 
-       .####%####################.,::;;;;;;;;;;, 
-      .####%###############%######:::;;;;;;;;;;;;;, 
-      ####%%################%######:::;;;;;;;;@;;;;;;, 
-      ####%%################%%#####:::;;;;;;;;;@;;;;;;, 
-      ####%%################%%#####:::;;;;;;;;;@@;;;;;; 
-      `####%################%#####:::;;;;;;;;;;@@;;;;;; 
-        `###%##############%####:::;;;;;;;;;;;;@@;;;;;; 
-           `#################'::%%%%%%%%%%%%;;;@;;;;;;' 
-             `#############'.%%%%%%%%%%%%%%%%%%;;;;;' 
-               `#########'%%%%#%%%%%%%%%%%%%%%%%%%, 
-                 `#####'.%%%%#%%%%%%%%%%%%%%#%%%%%%, 
-                   `##' %%%%##%%%%%%%%%%%%%%%##%%%%% 
-                   ###  %%%%##%%%%%%%%%%%%%%%##%%%%% 
-                    '   %%%%##%%%%%%%%%%%%%%%##%%%%% 
-                   '    `%%%%#%%%%%%%%%%%%%%%#%%%%%' 
-                  '       `%%%#%%%%%%%%%%%%%#%%%%' 
-                  `         `%%%%%%%%%%%%%%%%%%' 
-                   `          `%%%%%%%%%%%%%%' 
-                    `           `%%%%%%%%%%'  ' 
-                     '            `%%%%%%'   ' 
-                    '              `%%%'    ' 
-                   '               .%%      ` 
-                  `                %%%       ' 
-                   `                '       ' 
-                    `              '      ' 
-                    '            '      ' 
-                   '           '       ` 
-                  '           '        ' 
-                              `       ' 
-                               ' 
-                              ' 
-                             ' 
-
-    """)
+    
+    fi = Figlet(font='slant').renderText
+    f = format("")
     print("""
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ░░░░░   ░░░░░░░░░░░░░░░   ░░░░░░░░░░░░░░░░░░   ░░░░░░░░░░░░░░░░░   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░   ░░░░░░░░░░░░░░░░░░░░░░░   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
@@ -66,25 +30,32 @@ porfavor de poner 0 y no dejar en blanco en los espacions que quieras resolver
 3 es Leyes de Newton
 
    """)
-
+    
     print("[+] Por favor elige un numero:")
     PP = int(input("[-] Numero="))
     '''
     el def te pregunta cual es son los datos que tienes disponibles y envase al faltante que es igual a 0 empieza a resolver el problema
     '''
     def MRU():
-        print(f.renderText("Calculadora de MRU."))
+        print(fi("Calculadora de MRU."))
         print("""
 Porfavor de elegir el numero de la calculadora que quieres
 1-MRU triangulo          ---
                      ---( d )---
                     ( v )   ( t )
                     -------------
-2-Despejar el cambio de distancia entre dos distancias 
+2-Despejar la differencia 
                     Δx = x₂ - x₁
-        """)
+                    Δt = t₂ - t₁
+                    Δv = Δt / Δt
+3- para calcular velocidad media
+                x2 - x1      Δd
+    Vmed-× = ------------ = ---
+                t2 - t1      Δt
+  """)
         PPMRU = int(input("porfavot elige un numero ="))
         def MRU_triangulo():
+            print(fi("Estas en la calculadora de triangulo "))
             v = float(input("Dime la velocidad: "))
             t = float(input("Dime tu tiempo: "))
             d = float(input("Dime tu distancia: "))
@@ -101,7 +72,7 @@ Porfavor de elegir el numero de la calculadora que quieres
             if t <= 0:
                 if v >= 0 and d >= 0:
                     t = d / v
-                print("el tiempo debe ser ", t)
+
             elif t == t:
                 print("Este es el tiempo que ya tenias", t)
             else:
@@ -115,8 +86,42 @@ Porfavor de elegir el numero de la calculadora que quieres
                 print("Esta es  la distancia que ya tenias es:", d)
             else:
                 print("La distancia es:", d)
+        def MRU_differencia():
+            def deltaX():
+                #es el delta x
+                x1 = float(input("Por favor dime la distancia 1(x1)="))
+                x2 = float(input("Por favor dime la distancia 2(x2)="))
+                deltax = x1 - x2
+                print("""
+Tu distancia 1 fue {0} y distancia 2 fue {1} asi que la diferencia de distancia es {2}m/s
+                """.format(x1,x2,deltax))
+            
+
+            print(fi("""
+Calcula los deltas
+            """))
+            print("que delta quieres despejar?")
+            
+            eleccin = input("x,t,v? =")
+            if eleccin == "x":
+                deltaX()
+            elif eleccin == "t":
+                deltaT()
+            elif eleccin == "v":
+                deltaV()
+            elif():
+            #es el delta x
+                x1 = float(input("Por favor dime la distancia 1(x1)="))
+                x2 = float(input("Por favor dime la distancia 2(x2)="))
+                deltax = x1 - x2
+                print("""
+Tu distancia 1 fue {0} y distancia 2 fue {1} asi que la diferencia de distancia es {2}m/s
+                """.format(x1,x2,deltax))
+            
         if PPMRU == 1:
             MRU_triangulo()
+        elif PPMRU == 2:
+            MRU_differencia()
         else:
             print("Tu programa esta en otro castillo")
             MRU()
